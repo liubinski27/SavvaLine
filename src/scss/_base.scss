@@ -1,0 +1,86 @@
+$headerBackgroundColor: #fff0f0;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: SourceSansPro-Black;
+}
+
+@mixin linx ($link, $visit, $hover, $active) {
+	a {
+	  color: $link;
+	  &:hover {
+		color: $hover;   
+	  }
+	  &:active {
+		color: $active;
+	  }
+	}
+  }
+
+header {
+	background: $headerBackgroundColor;
+	box-shadow: 0 1px 3px #c7b9b9 inset;
+
+	.headerFlex {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.container {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 15px;
+}
+
+.navigation {
+	ul {
+		li {
+			display: inline-block;
+			padding: 0 15px 0 15px;
+		}
+	}
+}
+
+.contacts {
+
+	width: 30%;
+
+	ul {
+		display: flex;
+		justify-content: space-between;
+		flex-flow: row nowrap;
+		align-items: center;
+		list-style: none;
+	}
+
+	.socials {
+
+		.vk {
+			margin: 0 7px 0 7px;
+			background: url(../img/socials.png) no-repeat;
+			width: 34px;
+			height: 34px;
+			background-position-y: -1px;
+		}
+
+		.instagram {
+			margin: 0 0px 0 7px;
+			background: url(../img/socials.png) no-repeat;
+			width: 34px;
+			height: 34px;
+			background-position-y: -1px;
+			background-position-x: -36px;
+		}
+	}
+}
+
+main {
+	.carousel-caption {
+		font-size: 25px;
+	}
+}
