@@ -1,27 +1,36 @@
 $headerBackgroundColor: #fff0f0;
+$heroCaptionColor: black;
+$pink: #ffd1d1;
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: SourceSansPro-Black;
+	font-family: Roboto-Bold;
 }
 
-@mixin linx ($link, $visit, $hover, $active) {
-	a {
-	  color: $link;
-	  &:hover {
-		color: $hover;   
-	  }
-	  &:active {
-		color: $active;
-	  }
-	}
-  }
+a {
+	text-decoration: none;
+	color: black;
+	transition: 0.3s linear;
+}
+
+a:hover {
+	color: rgb(127, 127, 127);
+}
+
+p {
+	font-family: Roboto-Light;
+}
+
+h2 {
+	font-family: Roboto-Bold;
+}
 
 header {
 	background: $headerBackgroundColor;
 	box-shadow: 0 1px 3px #c7b9b9 inset;
+	border-bottom: 1px solid silver;
 
 	.headerFlex {
 		display: flex;
@@ -80,7 +89,113 @@ header {
 }
 
 main {
-	.carousel-caption {
-		font-size: 25px;
+
+	.hero {
+
+		border-bottom: 1px solid silver;
+
+		.heroCaption {
+			width: 750px;
+			margin: 0 auto;
+			text-align: center;
+			font-size: 25px;
+			color: $heroCaptionColor;
+			padding: 50px 0 50px 0;
+			line-height: 50px;
+		}
+	}
+
+	.services {
+		background: $pink;
+		padding: 75px 0 75px 0;
+		border-bottom: 1px solid silver;
+
+		.services_caption {
+			padding: 0px 0 50px 0;
+			text-align: center;
+			font-size: 25px;
+		}
+
+		.services_text {
+			padding: 0 0 20px 0;
+			text-align: center;
+			font-size: 25px;
+		}
+
+		.servicesBoxes {
+			display: flex;
+			justify-content: space-between;
+			flex-flow: row nowrap;
+
+			.autoDecoration {
+				background: url(../img/autoDecorationBackground.svg) no-repeat;
+				background-size: 50%;
+				width: 30%;
+			}
+
+			.weddingConcept {
+				background: url(../img/weddingConceptTwohearts.svg) no-repeat;
+				background-size: 50%;
+				width: 30%;
+			}
+
+			.outsideRegistration {
+				background: url(../img/outsideRegistrationAgra.svg) no-repeat;
+				background-size: 50%;
+				width: 30%;
+			}
+
+			h2 {
+				padding: 200px 0 25px 0;
+			}
+		}
+	}
+
+	.howWeWork {
+		padding: 75px 0 75px 0;
+
+		.howWeWork_caption {
+			padding: 0px 0 50px 0;
+			text-align: center;
+			font-size: 25px;
+		}
+
+		.howWeWork_text {
+			padding: 0 0 50px 0;
+			text-align: center;
+			font-size: 25px;
+		}
+
+		.howWeWork_boxes {
+			display: flex;
+			justify-content: space-between;
+			flex-flow: row nowrap;
+
+			.howWeWork_item {
+				background: $pink;
+				max-width: 30%;
+				border: 1px solid gray;
+
+				.budget {
+					background: url(../img/howWeWork_box_1.jpg) no-repeat;
+				}
+
+				.yourConcept {
+					background: url(../img/howWeWork_box_2.jpg) no-repeat;
+				}
+
+				.idea {
+					background: url(../img/howWeWork_box_3.jpg) no-repeat;
+				}
+
+				h2 {
+					padding: 210px 10px 10px 20px;
+				}
+
+				p {
+					padding: 10px 20px 15px 20px;
+				}
+			}
+		}
 	}
 }
