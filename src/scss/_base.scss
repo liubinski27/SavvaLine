@@ -37,7 +37,18 @@ header {
 		flex-flow: row nowrap;
 		justify-content: space-between;
 		align-items: center;
+
+		.logo {
+			position: absolute;
+			top: 15px;
+			left: 250px;
+			background: url(../img/logo.png) no-repeat;
+			width: 100px;
+			height: 100px;
+			background-size: 100%;
+		}
 	}
+
 }
 
 .container {
@@ -69,21 +80,24 @@ header {
 
 	.socials {
 
-		.vk {
-			margin: 0 7px 0 7px;
-			background: url(../img/socials.png) no-repeat;
-			width: 34px;
-			height: 34px;
-			background-position-y: -1px;
-		}
+		.socials_item {
 
-		.instagram {
-			margin: 0 0px 0 7px;
-			background: url(../img/socials.png) no-repeat;
-			width: 34px;
-			height: 34px;
-			background-position-y: -1px;
-			background-position-x: -36px;
+			margin: 0 7px 0 7px;
+
+			.vk {
+				background: url(../img/socials.png) no-repeat;
+				background-position-y: -1px;
+				width: 34px;
+				height: 34px;
+			}
+
+			.instagram {
+				background: url(../img/socials.png) no-repeat;
+				background-position-y: -1px;
+				background-position-x: -36px;
+				width: 34px;
+				height: 34px;
+			}
 		}
 	}
 }
