@@ -1,6 +1,7 @@
 $headerBackgroundColor: #fff0f0;
 $heroCaptionColor: black;
 $pink: #ffd1d1;
+$callMe_button: #ffdbdb;
 
 * {
 	margin: 0;
@@ -210,6 +211,35 @@ main {
 					padding: 10px 20px 15px 20px;
 				}
 			}
+		}
+	}
+
+	.callMe {
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 75px;
+		margin: 50px 0 50px 0;
+
+		.callMe_button {
+			display: flex;
+		    justify-content: center;
+		    align-items: center;
+			background: $callMe_button;
+			width: 300px;
+			height: 75px;
+			border: 3px solid black;
+
+			p {
+				font-family: Roboto-Bold;
+				font-size: 17px;
+			}
+		}
+
+		.callMe_button:active {
+			width: 290px;
+			height: 70px;
 		}
 	}
 }
