@@ -11,13 +11,13 @@ $callMe_button: #ffdbdb;
 }
 
 a {
-	text-decoration: none;
-	color: black;
+	text-decoration: none!important;
+	color: black!important;
 	transition: 0.3s linear;
 }
 
 a:hover {
-	color: rgb(127, 127, 127);
+	color: rgb(127, 127, 127)!important;
 }
 
 p {
@@ -168,6 +168,7 @@ main {
 
 	.howWeWork {
 		padding: 75px 0 75px 0;
+		border-bottom: 1px solid silver;
 
 		.howWeWork_caption {
 			padding: 0px 0 50px 0;
@@ -245,23 +246,41 @@ main {
 
 	.catalog {
 
-		padding: 50px 0 75px 0;
+		padding: 0 0 75px 0;
+		border-top: 1px solid silver;
+
+		.catalog_caption {
+			padding: 25px 0 15px 0;
+			font-size: 25px;
+			text-align: center;
+		}
 
 		.catalog_hero {
 
 			display: flex;
-		    justify-content: space-between;
-		    flex-flow: row wrap;
+			justify-content: space-between;
+			flex-flow: row wrap;
 
-			.catalog_item {
-				margin: 35px 0 35px 0;
-				width: 550px;
-				height: 340px;
+			a.catalog_item {
+				margin: 20px 0 20px 0;
+				width: 570px;
+				height: 350px;
+				overflow: hidden;
+				background: black;
+				position: relative;
 
 				img {
+					-webkit-transition: all 1s ease-out;
 					width: 100%;
 					height: 100%;
+					opacity: 0.75;
 				}
+
+				img:hover {
+					-webkit-transform: scale(1.1);
+					opacity: 1;
+				}
+
 			}
 
 			.catalog_item:nth-child(3n+3) {
