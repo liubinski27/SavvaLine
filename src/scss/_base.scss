@@ -11,13 +11,13 @@ $callMe_button: #ffdbdb;
 }
 
 a {
-	text-decoration: none!important;
-	color: black!important;
+	text-decoration: none !important;
+	color: black !important;
 	transition: 0.3s linear;
 }
 
 a:hover {
-	color: rgb(127, 127, 127)!important;
+	color: rgb(127, 127, 127) !important;
 }
 
 p {
@@ -38,6 +38,7 @@ header {
 		flex-flow: row nowrap;
 		justify-content: space-between;
 		align-items: center;
+		height: 62px;
 
 		.logo {
 			position: absolute;
@@ -55,7 +56,7 @@ header {
 .container {
 	width: 1200px;
 	margin: 0 auto;
-	padding: 15px;
+	padding: 0px 15px 0px 15px;
 }
 
 .navigation {
@@ -192,20 +193,34 @@ main {
 				max-width: 30%;
 				border: 1px solid gray;
 
+				.howWeWork_img {
+					width: 349.9px;
+					height: 200px;
+				}
+
 				.budget {
-					background: url(../img/howWeWork_box_1.jpg) no-repeat;
+					.howWeWork_img {
+						background: url(../img/howWeWork_box_1.jpg) no-repeat;
+						background-size: 100%;
+					}
 				}
 
 				.yourConcept {
-					background: url(../img/howWeWork_box_2.jpg) no-repeat;
+					.howWeWork_img {
+						background: url(../img/howWeWork_box_2.jpg) no-repeat;
+						background-size: 100%;
+					}
 				}
 
 				.idea {
-					background: url(../img/howWeWork_box_3.jpg) no-repeat;
+					.howWeWork_img {
+						background: url(../img/howWeWork_box_3.jpg) no-repeat;
+						background-size: 100%;
+					}
 				}
 
 				h2 {
-					padding: 210px 10px 10px 20px;
+					padding: 10px 10px 10px 20px;
 				}
 
 				p {
@@ -246,14 +261,9 @@ main {
 
 	.catalog {
 
-		padding: 0 0 75px 0;
+		padding: 55px 0 55px 0;
 		border-top: 1px solid silver;
-
-		.catalog_caption {
-			padding: 25px 0 15px 0;
-			font-size: 25px;
-			text-align: center;
-		}
+		border-bottom: 1px solid silver;
 
 		.catalog_hero {
 
@@ -299,7 +309,6 @@ main {
 footer {
 	background: $headerBackgroundColor;
 	box-shadow: 0 1px 3px #c7b9b9 inset;
-	border-bottom: 1px solid silver;
 
 	.footerFlex {
 		height: 120px;
