@@ -295,3 +295,30 @@ main {
 		}
 	}
 }
+
+footer {
+	background: $headerBackgroundColor;
+	box-shadow: 0 1px 3px #c7b9b9 inset;
+	border-bottom: 1px solid silver;
+
+	.footerFlex {
+		height: 120px;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-around;
+		align-items: center;
+
+		.logo {
+			background: url(../img/logo.png) no-repeat;
+			width: 100px;
+			height: 100px;
+			background-size: 100%;
+		}
+
+		.contacts {
+			li {
+				font-size: 30px;
+			}
+		}
+	}
+}
