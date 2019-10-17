@@ -11,13 +11,13 @@ $callMe_button: #ffdbdb;
 }
 
 a {
-	text-decoration: none !important;
-	color: black !important;
+	text-decoration: none;
+	color: black;
 	transition: 0.3s linear;
 }
 
 a:hover {
-	color: rgb(127, 127, 127) !important;
+	color: rgb(127, 127, 127);
 }
 
 p {
@@ -41,9 +41,9 @@ header {
 		height: 62px;
 
 		.logo {
-			position: absolute;
-			top: 15px;
-			left: 250px;
+			position: relative;
+			top: 33px;
+			left: 40px;
 			background: url(../img/logo.png) no-repeat;
 			width: 100px;
 			height: 100px;
@@ -111,8 +111,8 @@ main {
 		border-bottom: 1px solid silver;
 
 		.heroCaption {
-			width: 750px;
 			margin: 0 auto;
+			max-width: 750px;
 			text-align: center;
 			font-size: 25px;
 			color: $heroCaptionColor;
@@ -190,7 +190,7 @@ main {
 
 			.howWeWork_item {
 				background: $pink;
-				max-width: 30%;
+				width: 30%;
 				border: 1px solid gray;
 
 				.howWeWork_img {
@@ -271,24 +271,16 @@ main {
 			justify-content: space-between;
 			flex-flow: row wrap;
 
-			a.catalog_item {
+			.catalog_item {
 				margin: 20px 0 20px 0;
 				width: 570px;
 				height: 350px;
 				overflow: hidden;
 				background: black;
-				position: relative;
 
 				img {
-					-webkit-transition: all 1s ease-out;
 					width: 100%;
 					height: 100%;
-					opacity: 0.75;
-				}
-
-				img:hover {
-					-webkit-transform: scale(1.1);
-					opacity: 1;
 				}
 
 			}
@@ -325,9 +317,512 @@ footer {
 		}
 
 		.contacts {
+			width: 35%;
+
 			li {
 				font-size: 30px;
 			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	main {
+		.catalog {
+			.catalog_hero {
+				.catalog_item {
+					img {
+						-webkit-transition: all 1s ease-out;
+						opacity: 0.75;
+					}
+
+					img:hover {
+						-webkit-transform: scale(1.1);
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1199px) {
+	.container {
+		width: 950px;
+	}
+
+	main {
+
+		.howWeWork {
+			.howWeWork_boxes {
+				.howWeWork_item {
+					.howWeWork_img {
+						width: 274px;
+						height: 160px;
+					}
+				}
+			}
+		}
+
+		.catalog {
+			.catalog_hero {
+				.catalog_item {
+					width: 450px;
+					height: 276px;
+					margin: 15px 0 15px 0;
+				}
+
+				.catalog_item:nth-child(3n+3) {
+					width: 950px;
+					height: 552px;
+				}
+			}
+		}
+	}
+
+	footer {
+		.footerFlex {
+			.contacts {
+				li {
+					font-size: 22px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 991px) {
+
+	.container {
+		width: 750px;
+	}
+
+	header {
+		.headerFlex {
+			.logo {
+				left: -5px;
+			}
+
+			.navigation {
+				width: 90%;
+				text-align: center;
+			}
+
+			.contacts {
+				h3 {
+					display: none;
+				}
+			}
+		}
+	}
+
+	main {
+		.howWeWork {
+			.howWeWork_boxes {
+				.howWeWork_item {
+					.howWeWork_img {
+						width: 214px;
+						height: 125px;
+					}
+				}
+			}
+		}
+
+		.catalog {
+			.catalog_hero {
+				.catalog_item {
+					width: 350px;
+					height: 215px;
+					margin: 10px 0 10px 0;
+				}
+
+				.catalog_item:nth-child(3n+3) {
+					width: 750px;
+					height: 436px;
+				}
+			}
+		}
+	}
+
+	footer {
+		.footerFlex {
+			.contacts {
+
+				width: 55%;
+
+				ul {
+					li {
+						font-size: 22px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+
+	.container {
+		width: 576px;
+	}
+
+	p {
+		font-size: 20px;
+	}
+
+	header {
+		.headerFlex {
+			.logo {
+				left: -5px;
+			}
+
+			.navigation {
+				display: none;
+			}
+
+			.contacts {
+				h3 {
+					display: none;
+				}
+			}
+		}
+	}
+
+	main {
+
+		.hero {
+			.heroCaption {
+				p {
+					margin: 0;
+				}
+			}
+		}
+
+		.services {
+			.servicesBoxes {
+				h2 {
+					padding: 100px 0px 25px 0px;
+				}
+
+				p {
+					font-size: 17px;
+				}
+			}
+		}
+
+		.howWeWork {
+			.howWeWork_boxes {
+				.howWeWork_item {
+					.howWeWork_img {
+						width: 161px;
+						height: 94px;
+					}
+				}
+
+				p {
+					font-size: 15px;
+				}
+			}
+
+			h2 {
+				font-size: 15px;
+			}
+		}
+
+		.catalog {
+			.catalog_hero {
+				.catalog_item {
+					width: 576px;
+					height: 353px;
+					margin: 10px 0 10px 0;
+				}
+
+				.catalog_item:nth-child(3n+3) {
+					width: 576px;
+					height: 353px;
+					margin: 10px 0 10px 0;
+				}
+			}
+		}
+	}
+
+	footer {
+		.footerFlex {
+			.contacts {
+
+				width: 55%;
+
+				ul {
+					li {
+						font-size: 22px;
+					}
+				}
+			}
+		}
+
+		h3 {
+			font-size: 20px;
+		}
+	}
+}
+
+@media (max-width: 575px) {
+
+	.container {
+		width: 480px;
+	}
+
+	p {
+		font-size: 17px;
+	}
+
+	header {
+		.headerFlex {
+			.logo {
+				left: -5px;
+			}
+
+			.navigation {
+				display: none;
+			}
+
+			.contacts {
+				h3 {
+					display: none;
+				}
+			}
+		}
+	}
+
+	main {
+
+		.hero {
+			.heroCaption {
+				p {
+					margin: 0;
+				}
+			}
+		}
+
+		.services {
+			.servicesBoxes {
+
+				display: flex;
+				justify-content: space-between;
+				flex-flow: column;
+
+				.autoDecoration,
+				.weddingConcept,
+				.outsideRegistration {
+					width: 100%;
+					background-size: 30%;
+					background-position-x: right;
+				}
+
+				h2 {
+					padding: 100px 0px 25px 0px;
+				}
+
+				p {
+					font-size: 20px;
+				}
+			}
+		}
+
+		.howWeWork {
+			.howWeWork_boxes {
+
+				display: flex;
+				justify-content: space-between;
+				flex-flow: column;
+
+				.howWeWork_item {
+
+					width: 100%;
+
+					.howWeWork_img {
+						width: 448px;
+						height: 275px;
+					}
+				}
+
+				p {
+					font-size: 15px;
+				}
+			}
+
+			h2 {
+				font-size: 25px;
+			}
+		}
+
+		.catalog {
+			.catalog_hero {
+				.catalog_item {
+					width: 448px;
+					height: 275px;
+					margin: 10px 0 10px 0;
+				}
+
+				.catalog_item:nth-child(3n+3) {
+					width: 576px;
+					height: 353px;
+					margin: 10px 0 10px 0;
+				}
+			}
+		}
+	}
+
+	footer {
+		.footerFlex {
+			.contacts {
+
+				width: 55%;
+
+				ul {
+					li {
+						font-size: 22px;
+					}
+				}
+			}
+		}
+
+		h3 {
+			font-size: 20px;
+		}
+	}
+}
+
+@media (max-width: 479px) {
+
+	.container {
+		width: 360px;
+	}
+
+	p {
+		font-size: 14px;
+	}
+
+	h1 {
+		font-size: 25px;
+	}
+
+	header {
+		.headerFlex {
+			.logo {
+				left: -5px;
+			}
+
+			.navigation {
+				display: none;
+			}
+
+			.contacts {
+				h3 {
+					display: none;
+				}
+			}
+		}
+	}
+
+	main {
+
+		.hero {
+			.heroCaption {
+				p {
+					margin: 0;
+				}
+			}
+		}
+
+		.services {
+			.servicesBoxes {
+
+				display: flex;
+				justify-content: space-between;
+				flex-flow: column;
+
+				.autoDecoration,
+				.weddingConcept,
+				.outsideRegistration {
+					width: 100%;
+					background-size: 30%;
+					background-position-x: right;
+				}
+
+				h2 {
+					padding: 50px 0px 25px 0px;
+					font-size: 20px;
+				}
+
+				p {
+					font-size: 15px;
+				}
+			}
+		}
+
+		.howWeWork {
+			.howWeWork_boxes {
+
+				display: flex;
+				justify-content: space-between;
+				flex-flow: column;
+
+				.howWeWork_item {
+
+					width: 100%;
+
+					.howWeWork_img {
+						width: 328px;
+						height: 201px;
+					}
+				}
+
+				p {
+					font-size: 15px;
+				}
+			}
+
+			h2 {
+				font-size: 25px;
+			}
+		}
+
+		.catalog {
+			.catalog_hero {
+				.catalog_item {
+					width: 328px;
+					height: 201px;
+					margin: 5px 0 5px 0;
+				}
+
+				.catalog_item:nth-child(3n+3) {
+					width: 328px;
+					height: 201px;
+					margin: 5px 0 5px 0;
+				}
+			}
+		}
+	}
+
+	footer {
+		.footerFlex {
+			.contacts {
+
+				width: 55%;
+
+				ul {
+					li {
+						h3 {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+
+		h3 {
+			font-size: 20px;
 		}
 	}
 }
