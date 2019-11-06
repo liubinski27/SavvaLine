@@ -8,6 +8,7 @@ $callMe_button: #ffdbdb;
 /* скрываем чекбокс */
 #menu__toggle {
 	opacity: 0;
+	display: absolute;
 }
 
 /* стилизуем кнопку */
@@ -16,7 +17,7 @@ $callMe_button: #ffdbdb;
 	/* используем flex для центрирования содержимого */
 	align-items: center;
 	/* центрируем содержимое кнопки */
-	position: fixed;
+	position: absolute;
 	top: 18px;
 	right: 20px;
 	width: 26px;
@@ -51,9 +52,9 @@ $callMe_button: #ffdbdb;
 	display: block;
 	position: relative;
 	visibility: hidden;
-	top: 0;
+	top: -20px;
 	left: -100%;
-	width: 300px;
+	width: 100%;
 	margin: 0;
 	padding: 80px 0;
 	list-style: none;
@@ -144,6 +145,7 @@ header {
 			width: 100px;
 			height: 100px;
 			background-size: 100%;
+			z-index: 10000;
 		}
 	}
 
