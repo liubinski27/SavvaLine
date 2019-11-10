@@ -48,16 +48,16 @@
       </div>
     </div>
   </header>
-  <div class="hamburger-menu">
+  <label class="menu__btn" id="menu__btn" for="menu__toggle">
+    <span></span>
+  </label>
+  <div class="hamburger-menu hidden" id="hamburger-menu">
     <input id="menu__toggle" type="checkbox" />
-    <label class="menu__btn" for="menu__toggle">
-      <span></span>
-    </label>
     <ul class="menu__box">
-      <li><a class="menu__item" href="#">О нас</a></li>
+      <li><a class="menu__item" href="#about">О нас</a></li>
       <li><a class="menu__item" href="#">Наши свадьбы</a></li>
-      <li><a class="menu__item" href="#">Услуги</a></li>
-      <li><a class="menu__item" href="#">Каталог</a></li>
+      <li><a class="menu__item" href="#services">Услуги</a></li>
+      <li><a class="menu__item" href="#catalog">Каталог</a></li>
       <li class="socials_item">
         <a href="https://vk.com/savvaline" target="_blank">
           <div class="vk"></div>
@@ -82,6 +82,7 @@
         </div>
       </div>
     </div>
+    <a name="services"></a>
     <div class="services">
       <div class="container">
         <div class="services_caption">
@@ -115,6 +116,7 @@
         </div>
       </div>
     </div>
+    <a name="about"></a>
     <div class="howWeWork">
       <div class="container">
         <div class="howWeWork_caption">
@@ -157,6 +159,7 @@
         </div>
       </a>
     </div>
+    <a name="catalog"></a>
     <div class="catalog">
       <div class="container">
         <div class="catalog_hero">
@@ -195,6 +198,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -3,8 +3,6 @@ $heroCaptionColor: black;
 $pink: #ffd1d1;
 $callMe_button: #ffdbdb;
 
-
-
 /* скрываем чекбокс */
 #menu__toggle {
 	opacity: 0;
@@ -97,6 +95,11 @@ $callMe_button: #ffdbdb;
 	left: 0;
 }
 
+ul.menu__box {
+	.socials_item {
+		margin-top: 10px;
+	}
+}
 
 
 
@@ -941,4 +944,8 @@ footer {
 			font-size: 20px;
 		}
 	}
+}
+
+.hidden {
+	display: none;
 }
