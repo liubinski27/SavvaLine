@@ -1,6 +1,6 @@
 $headerBackgroundColor: #fff0f0;
 $heroCaptionColor: black;
-$pink: #ffd1d1;
+$pink: rgb(253, 237, 235);
 $callMe_button: #ffdbdb;
 
 /* скрываем чекбокс */
@@ -161,7 +161,12 @@ header {
   ul {
     li {
       display: inline-block;
-      padding: 0 15px 0 15px;
+      padding: 0 21px 0 15px;
+      border-right: 1px solid silver;
+    }
+
+    li:last-child {
+      border-right: none;
     }
   }
 }
@@ -287,11 +292,12 @@ main {
       .howWeWork_item {
         background: $pink;
         width: 30%;
-        border: 1px solid gray;
+        border-radius: 10px;
 
         .howWeWork_img {
-          width: 349.9px;
+          width: 100%;
           height: 200px;
+          border-radius: 10px 10px 0px 0px;
         }
 
         .budget {
@@ -341,6 +347,7 @@ main {
       width: 300px;
       height: 75px;
       border: 3px solid black;
+      border-radius: 10px;
 
       p {
         font-family: Roboto-Bold;
@@ -777,6 +784,7 @@ footer {
 
         .howWeWork_item {
           width: 100%;
+          margin: 5px 0px 5px 0px;
 
           .howWeWork_img {
             width: 448px;
