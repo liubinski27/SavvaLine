@@ -12,18 +12,3 @@ function myFun() {
         menu.classList.add('hidden');
     }
 }
-
-
-
-
-
-
-
-
-function addHidden() {
-    div.classList.add('hidden');
-}
-
-function removeHidden() {
-    div.classList.remove('hidden');
-}
