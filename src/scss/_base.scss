@@ -201,7 +201,6 @@ header {
 
 main {
   .carousel {
-
   }
 
   .hero {
@@ -371,10 +370,23 @@ main {
         height: 350px;
         overflow: hidden;
         background: black;
+        position: relative;
 
         img {
           width: 100%;
           height: 100%;
+        }
+
+        h2 {
+          width: 100%;
+          height: 55px;
+          background: black;
+          background: rgba(0, 0, 0, 0.6);
+          position: absolute;
+          bottom: 0px;
+          font-size: 40px;
+          color: rgb(220, 220, 220);
+          text-align: center;
         }
       }
 
@@ -385,6 +397,11 @@ main {
         img {
           width: 100%;
           height: 100%;
+        }
+
+        h2 {
+          height: 73px;
+          font-size: 53px;
         }
       }
     }
@@ -420,7 +437,8 @@ footer {
 }
 
 @media (min-width: 1200px) {
-  .hamburger-menu, .menu__btn {
+  .hamburger-menu,
+  .menu__btn {
     display: none;
   }
 
@@ -444,8 +462,8 @@ footer {
 }
 
 @media (max-width: 1199px) {
-
-  .hamburger-menu, .menu__btn {
+  .hamburger-menu,
+  .menu__btn {
     display: none;
   }
 
@@ -493,7 +511,8 @@ footer {
 }
 
 @media (max-width: 991px) {
-  .hamburger-menu, .menu__btn {
+  .hamburger-menu,
+  .menu__btn {
     display: none;
   }
 
@@ -538,11 +557,21 @@ footer {
           width: 350px;
           height: 215px;
           margin: 10px 0 10px 0;
+
+          h2 {
+            font-size: 30px;
+            height: 42px;
+          }
         }
 
         .catalog_item:nth-child(3n + 3) {
           width: 750px;
           height: 436px;
+
+          h2 {
+            font-size: 35px;
+            height: 47px;
+          }
         }
       }
     }
@@ -564,7 +593,6 @@ footer {
 }
 
 @media (max-width: 767px) {
-
   .menu__btn {
     display: flex;
   }
@@ -649,6 +677,11 @@ footer {
           width: 576px;
           height: 353px;
           margin: 10px 0 10px 0;
+
+          h2 {
+            font-size: 30px;
+            height: 42px;
+          }
         }
       }
     }
@@ -770,8 +803,8 @@ footer {
         }
 
         .catalog_item:nth-child(3n + 3) {
-          width: 576px;
-          height: 353px;
+          width: 448px;
+          height: 275px;
           margin: 10px 0 10px 0;
         }
       }
@@ -893,12 +926,22 @@ footer {
           width: 288px;
           height: 177px;
           margin: 5px 0 5px 0;
+
+          h2 {
+            font-size: 25px;
+            height: 35px;
+          }
         }
 
         .catalog_item:nth-child(3n + 3) {
           width: 288px;
           height: 177px;
           margin: 5px 0 5px 0;
+
+          h2 {
+            font-size: 25px;
+            height: 35px;
+          }
         }
       }
     }
