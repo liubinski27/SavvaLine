@@ -59,6 +59,11 @@ $callMe_button: #ffdbdb;
   text-align: center;
   background-color: #eceff1;
   box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+
+  li.socials_item {
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+  }
 }
 
 /* элементы меню */
@@ -187,19 +192,18 @@ header {
   margin: 0 7px 0 7px;
 
   .vk {
-    background: url(../img/socials.png) no-repeat;
-    background-position-y: -1px;
     width: 34px;
     height: 34px;
+    background: url(../img/vk.png) no-repeat;
+    background-size: 100%;
     display: inline-block;
   }
 
   .instagram {
-    background: url(../img/socials.png) no-repeat;
-    background-position-y: -1px;
-    background-position-x: -36px;
     width: 34px;
     height: 34px;
+    background: url(../img/instagram.png) no-repeat;
+    background-size: 100%;
     display: inline-block;
   }
 }
@@ -422,7 +426,7 @@ footer {
   box-shadow: 0 1px 3px #c7b9b9 inset;
 
   .footerFlex {
-    height: 120px;
+    height: 95px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
@@ -430,16 +434,19 @@ footer {
 
     .logo {
       background: url(../img/logo.png) no-repeat;
-      width: 100px;
-      height: 100px;
+      width: 75px;
+      height: 75px;
       background-size: 100%;
     }
 
     .contacts {
-      width: 35%;
+      width: 40%;
+      background: url(../img/phone.png) no-repeat;
+      background-size: 34px;
 
-      li {
-        font-size: 30px;
+      li:nth-child(1) {
+        font-size: 20px;
+        padding-left: 55px;
       }
     }
   }
@@ -511,8 +518,9 @@ footer {
   footer {
     .footerFlex {
       .contacts {
+
         li {
-          font-size: 22px;
+          font-size: 20px;
         }
       }
     }
@@ -588,12 +596,28 @@ footer {
 
   footer {
     .footerFlex {
+
+      .navigation {
+        width: 20%;
+        border-right: 1px solid silver;
+        border-left: 1px solid silver;
+
+        li {
+          border: none;
+          display: block;
+        }
+      }
+
       .contacts {
-        width: 55%;
+        background: none;
+        padding: 0;
+        width: 20%;
 
         ul {
           li {
-            font-size: 22px;
+            h3 {
+              display: none;
+            }
           }
         }
       }
@@ -698,6 +722,16 @@ footer {
 
   footer {
     .footerFlex {
+
+      .navigation {
+        width: 80%;
+        margin-left: 50px;
+
+        li {
+          display: inline-block;
+          font-size: 13px;
+        }
+      }
       .contacts {
         width: 55%;
 
@@ -960,6 +994,11 @@ footer {
 
   footer {
     .footerFlex {
+
+      .navigation ul li {
+        font-size: 12px;
+      }
+
       .contacts {
         width: 55%;
 
