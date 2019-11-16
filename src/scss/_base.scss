@@ -3,6 +3,16 @@ $heroCaptionColor: black;
 $pink: rgb(253, 237, 235);
 $callMe_button: #ffdbdb;
 
+body {
+  background:
+  linear-gradient(
+          rgba(255, 255, 255, 0.5), 
+          rgba(255, 255, 255, 0.5)
+        ),
+        /* bottom, image */
+        url(../img/body_background.jpg) fixed no-repeat;
+}
+
 /* скрываем чекбокс */
 #menu__toggle {
   opacity: 0;
@@ -235,6 +245,9 @@ main {
         to(rgba(135, 135, 135, 0.5)),
         color-stop(0, rgba(100, 100, 100, 0))
       );
+      background: url(../img/arrow.png) no-repeat center;
+      background-size: 50%;
+      transform: scaleX(-1);
     }
 
     .btnRight {
@@ -251,6 +264,8 @@ main {
         to(rgba(100, 100, 100, 0)),
         color-stop(0, rgba(135, 135, 135, 0.5))
       );
+      background: url(../img/arrow.png) no-repeat center;
+      background-size: 50%;
     }
 
     .btnLeft:hover,
@@ -513,6 +528,12 @@ footer {
 }
 
 @media (min-width: 1200px) {
+
+  body {
+    background-size: 120%;
+    background-position-y: -100px;
+  }
+
   .hamburger-menu,
   .menu__btn {
     display: none;
@@ -538,6 +559,10 @@ footer {
 }
 
 @media (max-width: 1199px) {
+  body {
+    background-size: 140%;
+    background-position-x: -200px;
+  }
   .hamburger-menu,
   .menu__btn {
     display: none;
@@ -577,6 +602,11 @@ footer {
 }
 
 @media (max-width: 991px) {
+
+  body {
+    background-size: 200%;
+  }
+
   .hamburger-menu,
   .menu__btn {
     display: none;
@@ -669,6 +699,11 @@ footer {
 }
 
 @media (max-width: 767px) {
+
+  body {
+    background-size: 260%;
+  }
+
   .menu__btn {
     display: flex;
   }
@@ -765,6 +800,12 @@ footer {
 }
 
 @media (max-width: 575px) {
+
+  body {
+    background-size: 320%;
+    background-position-x: -300px;
+  }
+
   .container {
     width: 480px;
   }
@@ -873,6 +914,12 @@ footer {
 }
 
 @media (max-width: 479px) {
+
+  body {
+    background-size: 410%;
+    background-position-x: -300px;
+  }
+
   .container {
     width: 320px;
   }

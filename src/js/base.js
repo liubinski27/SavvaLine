@@ -56,13 +56,13 @@ function carouselNext(value, ifLastValue) {
             imgs[0].classList.add('active');
             setTimeout(function() {
                 imgs[0].classList.remove('opacityHidden');
-            }, 100);
+            }, 200);
         }
         else {
             imgs[value + 1].classList.add('active');
             setTimeout(function() {
                 imgs[value + 1].classList.remove('opacityHidden');
-            }, 100);
+            }, 200);
         }
         carouselHeight();
     }, 1000);
@@ -91,13 +91,13 @@ function carouselPrev(value, ifFirstValue) {
             imgs[imgs.length - 1].classList.add('active');
             setTimeout(function() {
                 imgs[imgs.length - 1].classList.remove('opacityHidden');
-            }, 100);
+            }, 200);
         }
         else {
             imgs[value - 1].classList.add('active');
             setTimeout(function() {
                 imgs[value - 1].classList.remove('opacityHidden');
-            }, 100);
+            }, 200);
         }
         carouselHeight();
     }, 1000);
