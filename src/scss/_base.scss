@@ -636,6 +636,14 @@ footer {
   }
 
   main {
+
+    .carousel {
+      .btnLeft, .btnRight {
+        background-size: 35%;
+        background-position-x: 50px;
+      }
+    }
+
     .howWeWork {
       .howWeWork_boxes {
         .howWeWork_item {
@@ -737,6 +745,14 @@ footer {
   }
 
   main {
+
+    .carousel {
+      .btnLeft, .btnRight {
+        background-size: 30%;
+        background-position-x: 60px;
+      }
+    }
+
     .hero {
       .heroCaption {
         p {
@@ -836,6 +852,14 @@ footer {
   }
 
   main {
+
+    .carousel {
+      .btnLeft, .btnRight {
+        background-size: 25%;
+        background-position-x: 65px;
+      }
+    }
+
     .hero {
       .heroCaption {
         p {
@@ -951,6 +975,14 @@ footer {
   }
 
   main {
+
+    .carousel {
+      .btnLeft, .btnRight {
+        background-size: 20%;
+        background-position-x: 77px;
+      }
+    }
+
     .hero {
       .heroCaption {
         p {
