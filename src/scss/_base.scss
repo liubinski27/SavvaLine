@@ -416,6 +416,7 @@ main {
       height: 75px;
       border: 1px solid black;
       border-radius: 100px;
+      transition: 0.3s linear;
 
       p {
         font-family: Roboto-Bold;
@@ -423,9 +424,50 @@ main {
       }
     }
 
+    .callMe_button:hover {
+      color: rgb(127, 127, 127);
+      cursor: pointer;
+    }
+
     .callMe_button:active {
       width: 290px;
       height: 70px;
+    }
+  }
+
+  .callMe_active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    margin: 50px 0 50px 0;
+
+    .vk, .instagram, .phone {
+      margin: 0px 20px 0px 20px;
+    }
+
+    .vk {
+      width: 34px;
+      height: 34px;
+      background: url(../img/vk.png) no-repeat;
+      background-size: 100%;
+      display: inline-block;
+    }
+  
+    .instagram {
+      width: 34px;
+      height: 34px;
+      background: url(../img/instagram.png) no-repeat;
+      background-size: 100%;
+      display: inline-block;
+    }
+
+    .phone {
+      width: 34px;
+      height: 34px;
+      background: url(../img/phone.png) no-repeat;
+      background-size: 100%;
+      display: inline-block;
     }
   }
 
@@ -1086,7 +1128,7 @@ footer {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .active {

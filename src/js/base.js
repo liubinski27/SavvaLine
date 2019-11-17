@@ -23,9 +23,9 @@ function carouselHeight() {
 //начало меню для маленьких устройств
 var buttonS = document.getElementById('menu__btn');
 var menu = document.getElementById('hamburger-menu');
-buttonS.addEventListener('click', myFun);
+buttonS.addEventListener('click', menuHidden);
 
-function myFun() {
+function menuHidden() {
     if (menu.classList.contains('hidden')) {
         menu.classList.remove('hidden');
     }
@@ -140,3 +140,16 @@ btnLeft.addEventListener('click', btnLeftRefreshTimer);
 
 var btnRight = document.getElementById('btnRight');
 btnRight.addEventListener('click', btnRightRefreshTimer);
+
+function callMe_contactsHidden() {
+    if (callMe_active.classList.contains('hidden')) {
+        callMe_active.classList.remove('hidden');
+    }
+    else {
+        callMe_active.classList.add('hidden');
+    }
+}
+
+var callMe_button = document.getElementById('callMe_button');
+var callMe_active = document.getElementById('callMe_active');
+callMe_button.addEventListener('click', callMe_contactsHidden);
