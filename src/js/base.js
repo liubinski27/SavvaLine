@@ -30,20 +30,30 @@ function myFun() {
     }
 }
 
-setInterval(checkNowForNext, 4000);
+var handle = setInterval(checkNowForNext, 4000);
 
 var imgs = document.querySelectorAll('div.pics > img');
 
+var buttonWaitTimer = 0;
+
+function buttonWaitTimerFunction() {
+    buttonWaitTimer = 0;
+}
+
 function checkNowForNext() {
-    for (var i = 0; i < imgs.length; i++) {
-        var now = imgs[i].classList;
-        var ifLast = false;
-        if (now == 'active') {
-            if (i === imgs.length - 1) {
-                var ifLast = true;
+    if (buttonWaitTimer === 0) {
+        buttonWaitTimer = 1;
+        for (var i = 0; i < imgs.length; i++) {
+            var now = imgs[i].classList;
+            var ifLast = false;
+            if (now == 'active') {
+                if (i === imgs.length - 1) {
+                    var ifLast = true;
+                }
+                carouselNext(i, ifLast);
+                setTimeout(buttonWaitTimerFunction, 1700);
+                break;
             }
-            carouselNext(i, ifLast);
-            break;
         }
     }
 }
@@ -54,31 +64,34 @@ function carouselNext(value, ifLastValue) {
         imgs[value].classList.remove('active');
         if (ifLastValue) {
             imgs[0].classList.add('active');
-            setTimeout(function() {
+            setTimeout(function () {
                 imgs[0].classList.remove('opacityHidden');
             }, 200);
         }
         else {
             imgs[value + 1].classList.add('active');
-            setTimeout(function() {
+            setTimeout(function () {
                 imgs[value + 1].classList.remove('opacityHidden');
             }, 200);
         }
         carouselHeight();
     }, 1000);
-    setTimeout(checkNowForNext, 4000);
 }
 
 function checkNowForPrev() {
-    for (var i = 0; i < imgs.length; i++) {
-        var now = imgs[i].classList;
-        var ifFirst = false;
-        if (now == 'active') {
-            if (i === 0) {
-                var ifFirst = true;
+    if (buttonWaitTimer === 0) {
+        buttonWaitTimer = 1;
+        for (var i = 0; i < imgs.length; i++) {
+            var now = imgs[i].classList;
+            var ifFirst = false;
+            if (now == 'active') {
+                if (i === 0) {
+                    var ifFirst = true;
+                }
+                carouselPrev(i, ifFirst);
+                setTimeout(buttonWaitTimerFunction, 1700);
+                break;
             }
-            carouselPrev(i, ifFirst);
-            break;
         }
     }
 }
@@ -89,13 +102,13 @@ function carouselPrev(value, ifFirstValue) {
         imgs[value].classList.remove('active');
         if (ifFirstValue) {
             imgs[imgs.length - 1].classList.add('active');
-            setTimeout(function() {
+            setTimeout(function () {
                 imgs[imgs.length - 1].classList.remove('opacityHidden');
             }, 200);
         }
         else {
             imgs[value - 1].classList.add('active');
-            setTimeout(function() {
+            setTimeout(function () {
                 imgs[value - 1].classList.remove('opacityHidden');
             }, 200);
         }
@@ -110,8 +123,20 @@ function carouselPrev(value, ifFirstValue) {
     document.querySelector('.carousel').style.height = carouselImgHeight + 'px';
 }*/
 
+function btnLeftRefreshTimer() {
+    checkNowForPrev();
+    clearInterval(handle);
+    handle = setInterval(checkNowForNext, 4000);
+}
+
+function btnRightRefreshTimer() {
+    checkNowForPrev();
+    clearInterval(handle);
+    handle = setInterval(checkNowForNext, 4000);
+}
+
 var btnLeft = document.querySelector('.btnLeft');
-btnLeft.addEventListener('click', checkNowForPrev);
+btnLeft.addEventListener('click', btnLeftRefreshTimer);
 
 var btnRight = document.getElementById('btnRight');
-btnRight.addEventListener('click', checkNowForNext);
+btnRight.addEventListener('click', btnRightRefreshTimer);
