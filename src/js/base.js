@@ -13,12 +13,16 @@ function carouselHeight() {
     document.querySelector('.carousel').style.height = carouselImgHeight + 'px';
 }
 
-carouselHeight();
+/*function carouselHeight() {
+    var carouselImg = document.querySelector('.carousel');
+    var carouselImgWidth = carouselImg.offsetWidth;
+    var carouselImgHeight = carouselImgWidth / 1.46;
+    document.querySelector('.carousel').style.height = carouselImgHeight + 'px';
+}*/
 
+//начало меню для маленьких устройств
 var buttonS = document.getElementById('menu__btn');
-
 var menu = document.getElementById('hamburger-menu');
-
 buttonS.addEventListener('click', myFun);
 
 function myFun() {
@@ -29,12 +33,15 @@ function myFun() {
         menu.classList.add('hidden');
     }
 }
+//конец меню для маленьких устройств
+
+carouselHeight();
 
 var handle = setInterval(checkNowForNext, 4000);
-
 var imgs = document.querySelectorAll('div.pics > img');
-
 var buttonWaitTimer = 0;
+var ifLast;
+var ifFirst;
 
 function buttonWaitTimerFunction() {
     buttonWaitTimer = 0;
@@ -48,7 +55,7 @@ function checkNowForNext() {
             var ifLast = false;
             if (now == 'active') {
                 if (i === imgs.length - 1) {
-                    var ifLast = true;
+                    ifLast = true;
                 }
                 carouselNext(i, ifLast);
                 setTimeout(buttonWaitTimerFunction, 1700);
@@ -86,7 +93,7 @@ function checkNowForPrev() {
             var ifFirst = false;
             if (now == 'active') {
                 if (i === 0) {
-                    var ifFirst = true;
+                    ifFirst = true;
                 }
                 carouselPrev(i, ifFirst);
                 setTimeout(buttonWaitTimerFunction, 1700);
@@ -115,13 +122,6 @@ function carouselPrev(value, ifFirstValue) {
         carouselHeight();
     }, 1000);
 }
-
-/*function carouselHeight() {
-    var carouselImg = document.querySelector('.carousel');
-    var carouselImgWidth = carouselImg.offsetWidth;
-    var carouselImgHeight = carouselImgWidth / 1.46;
-    document.querySelector('.carousel').style.height = carouselImgHeight + 'px';
-}*/
 
 function btnLeftRefreshTimer() {
     checkNowForPrev();
