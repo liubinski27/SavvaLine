@@ -1,0 +1,40 @@
+//common for all secondary sections
+.autodecoration_title {
+
+    margin: 10px 0 25px 0;
+
+    h1 {
+        text-align: center;
+    }
+}
+
+.autodecoration_items {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    margin: 0px 0 20px 0;
+
+    .autodecoration_item {
+        width: 360px;
+        height: 240px;
+        margin: 10px 0 10px 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .autodecoration_item:hover {
+
+    }
+}
+
+@media (max-width: 479px) {
+
+    .autodecoration_item {
+        width: 320px;
+        height: 214px!important;
+        margin: 10px 0 10px 0;
+    }
+}
