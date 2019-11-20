@@ -82,7 +82,7 @@ function carouselNext(value, ifLastValue) {
             }, 200);
         }
         carouselHeight();
-    }, 1100);
+    }, 1200);
 }
 
 function checkNowForPrev() {
@@ -120,7 +120,7 @@ function carouselPrev(value, ifFirstValue) {
             }, 200);
         }
         carouselHeight();
-    }, 1100);
+    }, 1200);
 }
 
 function btnLeftRefreshTimer() {
