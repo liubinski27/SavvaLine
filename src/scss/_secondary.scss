@@ -1,5 +1,5 @@
 //common for all secondary sections
-.autodecoration_title {
+.autodecoration_title, .outsideregistration_title, .halls_title, .bonbonnieres_title, .accessories_title {
   margin: 10px 0 25px 0;
 
   h1 {
@@ -7,13 +7,72 @@
   }
 }
 
-.autodecoration_items {
+.halls_items, .accessories_items {
+  margin: 10px 0 10px 0;
+
+  .item {
+    margin: 10px 0 10px 0;
+    padding: 0 10px 0 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    align-items: center;
+    border: 2px solid silver;
+    width: 70%;
+    height: 50px;
+    border-radius: 0 25px 25px 0;
+
+    div {
+      width: 30px;
+      height: 30px;
+      border-radius: 15px;
+    }
+
+    .item_beige {
+      background: beige;
+    }
+
+    .item_lightBlue {
+      background: #00bfff;
+    }
+
+    .item_red {
+      background: red;
+    }
+
+    .item_marsala {
+      background: #A52A2A;
+    }
+
+    .item_peach {
+      background: #ffe5b4;
+    }
+
+    .item_pink {
+      background: pink;
+    }
+
+    .item_blue {
+      background: blue;
+    }
+
+    .item_purple {
+      background: purple;
+    }
+
+    .item_violet {
+      background: violet;
+    }
+  }
+}
+
+.autodecoration_items, .outsideregistration_items, .bonbonnieres_items {
   display: flex;
   justify-content: space-around;
   flex-flow: row wrap;
   margin: 0px 0 20px 0;
 
-  .autodecoration_item {
+  .autodecoration_item, .outsideregistration_item, .bonbonnieres_item {
     width: 360px;
     height: 240px;
     margin: 10px 0 10px 0;
@@ -33,18 +92,55 @@
       top: 0px;
       opacity: 0;
       transition: 1s ease;
+      font-size: 35px;
+    }
+
+    p {
+      font-family: Roboto-Bold;
+      font-size: 25px;
+      color: white;
+      position: absolute;
+      padding: 10px;
+      bottom: 10px;
+      opacity: 0;
+      transition: 1s ease;
+
+      span {
+        color: rgb(255, 100, 100);
+      }
     }
   }
 
-  .autodecoration_item:hover {
-    h2 {
+  .autodecoration_item:hover, .outsideregistration_item:hover, .bonbonnieres_item:hover {
+    h2, p {
       opacity: 1;
     }
   }
 }
 
+.footerHalls {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .halls_items, .accessories_items {
+    .item:hover {
+      padding: 0 20px 0 20px;
+      width: 75%;
+      height: 70px;
+      border-radius: 0 35px 35px 0;
+      background: rgba(0, 0, 0, 0.2);
+      border: 2px solid black;
+      color: black;
+      cursor: pointer;
+    }
+  }
+}
+
 @media (min-width: 480px) {
-  .autodecoration_item {
+  .autodecoration_item, .outsideregistration_item, .bonbonnieres_item {
     h2 {
       width: 360px;
       height: 240px;
@@ -52,8 +148,16 @@
   }
 }
 
+@media (max-width: 767px) {
+  .halls_items, .accessories_items {
+    .item {
+      width: 100%;
+    }
+  }
+}
+
 @media (max-width: 479px) {
-  .autodecoration_item {
+  .autodecoration_item, .outsideregistration_item, .bonbonnieres_item {
     width: 320px !important;
     height: 200px !important;
     margin: 10px 0 10px 0;

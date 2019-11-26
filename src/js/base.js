@@ -58,7 +58,7 @@ function checkNowForNext() {
                     ifLast = true;
                 }
                 carouselNext(i, ifLast);
-                setTimeout(buttonWaitTimerFunction, 1700);
+                setTimeout(buttonWaitTimerFunction, 1900);
                 break;
             }
         }
@@ -96,7 +96,7 @@ function checkNowForPrev() {
                     ifFirst = true;
                 }
                 carouselPrev(i, ifFirst);
-                setTimeout(buttonWaitTimerFunction, 1700);
+                setTimeout(buttonWaitTimerFunction, 1900);
                 break;
             }
         }

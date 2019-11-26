@@ -4,13 +4,8 @@ $pink: rgb(253, 237, 235);
 $callMe_button: #ffdbdb;
 
 body {
-  background:
-  linear-gradient(
-          rgba(255, 255, 255, 0.5), 
-          rgba(255, 255, 255, 0.5)
-        ),
-        /* bottom, image */
-        url(../img/body_background.jpg) fixed no-repeat;
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+    /* bottom, image */ url(../img/body_background.jpg) fixed no-repeat;
 }
 
 /* скрываем чекбокс */
@@ -442,7 +437,9 @@ main {
     height: 75px;
     margin: 50px 0 50px 0;
 
-    .vk, .instagram, .phone {
+    .vk,
+    .instagram,
+    .phone {
       margin: 0px 20px 0px 20px;
     }
 
@@ -453,7 +450,7 @@ main {
       background-size: 100%;
       display: inline-block;
     }
-  
+
     .instagram {
       width: 34px;
       height: 34px;
@@ -526,11 +523,10 @@ main {
 }
 
 footer {
-  background: $headerBackgroundColor;
-  box-shadow: 0 1px 3px #c7b9b9 inset;
-  border-bottom: 1px solid silver;
-
   .footerFlex {
+    background: $headerBackgroundColor;
+    box-shadow: 0 1px 3px #c7b9b9 inset;
+    border-bottom: 1px solid silver;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
@@ -570,7 +566,6 @@ footer {
 }
 
 @media (min-width: 1200px) {
-
   body {
     background-size: 120%;
     background-position-y: -100px;
@@ -644,7 +639,6 @@ footer {
 }
 
 @media (max-width: 991px) {
-
   body {
     background-size: 240%;
   }
@@ -678,9 +672,9 @@ footer {
   }
 
   main {
-
     .carousel {
-      .btnLeft, .btnRight {
+      .btnLeft,
+      .btnRight {
         background-size: 35%;
         background-position-x: 50px;
       }
@@ -749,7 +743,6 @@ footer {
 }
 
 @media (max-width: 767px) {
-
   body {
     background-size: 260%;
   }
@@ -787,9 +780,9 @@ footer {
   }
 
   main {
-
     .carousel {
-      .btnLeft, .btnRight {
+      .btnLeft,
+      .btnRight {
         background-size: 30%;
         background-position-x: 60px;
       }
@@ -858,7 +851,6 @@ footer {
 }
 
 @media (max-width: 575px) {
-
   body {
     background-size: 320%;
     background-position-x: -300px;
@@ -894,9 +886,9 @@ footer {
   }
 
   main {
-
     .carousel {
-      .btnLeft, .btnRight {
+      .btnLeft,
+      .btnRight {
         background-size: 25%;
         background-position-x: 65px;
       }
@@ -980,7 +972,6 @@ footer {
 }
 
 @media (max-width: 479px) {
-
   body {
     background-size: 410%;
     background-position-x: -300px;
@@ -1017,9 +1008,9 @@ footer {
   }
 
   main {
-
     .carousel {
-      .btnLeft, .btnRight {
+      .btnLeft,
+      .btnRight {
         background-size: 20%;
         background-position-x: 77px;
       }
