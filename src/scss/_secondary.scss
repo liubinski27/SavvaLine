@@ -1,5 +1,9 @@
 //common for all secondary sections
-.autodecoration_title, .outsideregistration_title, .halls_title, .bonbonnieres_title, .accessories_title {
+.autodecoration_title,
+.outsideregistration_title,
+.halls_title,
+.bonbonnieres_title,
+.accessories_title {
   margin: 10px 0 25px 0;
 
   h1 {
@@ -7,8 +11,10 @@
   }
 }
 
-.halls_items, .accessories_items {
+.halls_items,
+.accessories_items {
   margin: 10px 0 10px 0;
+  padding: 0px 0 20px 0;
 
   .item {
     margin: 10px 0 10px 0;
@@ -41,7 +47,7 @@
     }
 
     .item_marsala {
-      background: #A52A2A;
+      background: #a52a2a;
     }
 
     .item_peach {
@@ -63,16 +69,28 @@
     .item_violet {
       background: violet;
     }
+
+    .item_powdery {
+      background: #fadadd;
+    }
+
+    .item_turquoise {
+      background: #30d5c8;
+    }
   }
 }
 
-.autodecoration_items, .outsideregistration_items, .bonbonnieres_items {
+.autodecoration_items,
+.outsideregistration_items,
+.bonbonnieres_items {
   display: flex;
   justify-content: space-around;
   flex-flow: row wrap;
   margin: 0px 0 20px 0;
 
-  .autodecoration_item, .outsideregistration_item, .bonbonnieres_item {
+  .autodecoration_item,
+  .outsideregistration_item,
+  .bonbonnieres_item {
     width: 360px;
     height: 240px;
     margin: 10px 0 10px 0;
@@ -111,21 +129,27 @@
     }
   }
 
-  .autodecoration_item:hover, .outsideregistration_item:hover, .bonbonnieres_item:hover {
-    h2, p {
+  .autodecoration_item:hover,
+  .outsideregistration_item:hover,
+  .bonbonnieres_item:hover {
+    h2,
+    p {
       opacity: 1;
     }
   }
 }
 
-.footerHalls {
-  position: fixed;
-  width: 100%;
-  bottom: 0;
+footer {
+  .footer_adaptive {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+  }
 }
 
 @media (min-width: 768px) {
-  .halls_items, .accessories_items {
+  .halls_items,
+  .accessories_items {
     .item:hover {
       padding: 0 20px 0 20px;
       width: 75%;
@@ -140,7 +164,9 @@
 }
 
 @media (min-width: 480px) {
-  .autodecoration_item, .outsideregistration_item, .bonbonnieres_item {
+  .autodecoration_item,
+  .outsideregistration_item,
+  .bonbonnieres_item {
     h2 {
       width: 360px;
       height: 240px;
@@ -149,7 +175,8 @@
 }
 
 @media (max-width: 767px) {
-  .halls_items, .accessories_items {
+  .halls_items,
+  .accessories_items {
     .item {
       width: 100%;
     }
@@ -157,7 +184,9 @@
 }
 
 @media (max-width: 479px) {
-  .autodecoration_item, .outsideregistration_item, .bonbonnieres_item {
+  .autodecoration_item,
+  .outsideregistration_item,
+  .bonbonnieres_item {
     width: 320px !important;
     height: 200px !important;
     margin: 10px 0 10px 0;

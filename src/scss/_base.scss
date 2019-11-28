@@ -565,6 +565,10 @@ footer {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @media (min-width: 1200px) {
   body {
     background-size: 120%;
