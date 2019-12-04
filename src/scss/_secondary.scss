@@ -139,6 +139,25 @@
   }
 }
 
+.pages {
+  display: flex;
+  justify-content: center;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin: 0 0 30px 0;
+  .pages_item {
+    border: 2px solid purple;
+    text-align: center;
+    width: 23px;
+    height: 23px;
+    margin: 0 5px 0 5px;
+  }
+
+  .pages_active {
+    border: 2px solid red;
+  }
+}
+
 footer {
   .footer_adaptive {
     position: absolute;

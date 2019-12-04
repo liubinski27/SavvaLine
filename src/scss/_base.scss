@@ -175,6 +175,10 @@ header {
       border-right: 1px solid silver;
     }
 
+    li:nth-child(2) {
+      display: none;
+    }
+
     li:last-child {
       border-right: none;
     }
