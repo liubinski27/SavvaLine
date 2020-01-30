@@ -9,6 +9,8 @@
   <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
   <link rel="stylesheet" href="css/main.css">
   <title>Свадебное агенство Savvaline</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="./telegramform/js/telegramform.js"></script>
 </head>
 
 <body>
@@ -73,6 +75,23 @@
   </div>
   <main>
     <div class="container">
+      <form action="telegram.php" method="POST">
+        <legend>Заголовок формы</legend>
+
+        <div class="form-group">
+          <input type="text" class="form-control" id="" name="name" placeholder="Введите имя">
+        </div>
+      
+        <div class="form-group">
+          <input type="text" class="form-control" id="" name="phone" placeholder="Введите телефон">
+        </div>
+      
+        <div class="form-group">
+          <input type="text" class="form-control" id="" name="email" placeholder="Введите email">
+        </div>
+      
+        <button type="submit" class="btn">Отправить форму</button>
+      </form>
       <div class="carousel">
         <div class="pics">
           <img class="active" src="img/carousel_1.jpg" alt="carousel_image_1">
@@ -181,7 +200,8 @@
     <div class="catalog">
       <div class="container">
         <div class="catalog_hero">
-          <a href="autodecoration_page=1.html" class="catalog_item"><img src="img/autoDecoration.jpg" alt="autoDecoration">
+          <a href="autodecoration_page=1.html" class="catalog_item"><img src="img/autoDecoration.jpg"
+              alt="autoDecoration">
             <h2>Автоукрашения</h2>
           </a>
           <a href="outsideregistration.html" class="catalog_item"><img src="img/outSideRegistration.jpg"
@@ -194,7 +214,7 @@
           <a href="bonbonnieres.html" class="catalog_item"><img src="img/bonbonnieres.jpg" alt="bonbonnieres">
             <h2>Бонбоньерки</h2>
           </a>
-          <a href="accessories_page=1.html" class="catalog_item"><img src="img/accessories.jpg" alt="accessories">
+          <a href="accessories.html" class="catalog_item"><img src="img/accessories.jpg" alt="accessories">
             <h2>Аксессуары</h2>
           </a>
         </div>
